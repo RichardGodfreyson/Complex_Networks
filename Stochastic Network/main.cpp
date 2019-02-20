@@ -45,9 +45,11 @@ int main()
 
 	for (int connectivity = 1; connectivity <= MAX_CONNECT; ++connectivity)
 	{
+		cout << "Calculateing for connctivity " << connectivity << endl;
 		int num_sides = NUM_NODES * connectivity;
 		for (int t = 0; t < NUM_TRIALS; ++t)
 		{
+			cout << "#";
 			//initialize randomizer
 			srand(time(NULL));
 
@@ -102,6 +104,7 @@ int main()
 
 			free(graph);
 		}
+		cout << endl;
 	}
 	return 0;
 }
