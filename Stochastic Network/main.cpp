@@ -5,7 +5,7 @@
 using namespace std;
 
 const int NUM_NODES = 1000;
-const int NUM_TRIALS = 10;
+const int NUM_TRIALS = 100;
 const int MAX_CONNECT = NUM_NODES / 2;
 
 double *clustering_coefficient = (double *)calloc(NUM_NODES, sizeof(double));
@@ -49,7 +49,7 @@ int main()
 		int num_sides = NUM_NODES * connectivity;
 		for (int t = 0; t < NUM_TRIALS; ++t)
 		{
-			cout << "#";
+			printf("#");
 			//initialize randomizer
 			srand(time(NULL));
 
@@ -104,7 +104,7 @@ int main()
 
 			free(graph);
 		}
-		cout << endl;
+		printf("\n");
 	}
 	return 0;
 }
